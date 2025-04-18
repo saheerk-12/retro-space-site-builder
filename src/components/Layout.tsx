@@ -7,6 +7,13 @@ interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <header className="border-b bg-white">
@@ -21,56 +28,26 @@ const Layout = ({ children }: LayoutProps) => {
             <NavigationMenu className="hidden md:flex">
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <Link to="/" className={cn(navigationMenuTriggerStyle())}>
-                    Home
-                  </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Link to="/about" className={cn(navigationMenuTriggerStyle())}>
+                  <Link to="/#who-we-are" onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection('who-we-are');
+                  }} className={cn(navigationMenuTriggerStyle())}>
                     About
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link to="/services/hvac" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                            <div className="text-sm font-medium leading-none">HVAC Systems</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">Installation, maintenance, and repair</p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link to="/services/electromechanical" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                            <div className="text-sm font-medium leading-none">Electromechanical Works</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">Equipment installation and maintenance</p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link to="/services/plumbing" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                            <div className="text-sm font-medium leading-none">Plumbing & Electrical</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">Sanitary works and electrical contracting</p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link to="/services/building" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                            <div className="text-sm font-medium leading-none">Building Finishing</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">Tiling, carpentry, and more</p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                    </ul>
-                  </NavigationMenuContent>
+                  <Link to="/#our-services" onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection('our-services');
+                  }} className={cn(navigationMenuTriggerStyle())}>
+                    Services
+                  </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link to="/testimonials" className={cn(navigationMenuTriggerStyle())}>
+                  <Link to="/#testimonials" onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection('testimonials');
+                  }} className={cn(navigationMenuTriggerStyle())}>
                     Testimonials
                   </Link>
                 </NavigationMenuItem>

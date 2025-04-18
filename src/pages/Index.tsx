@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { AirVent, Fan, Building, Wrench } from "lucide-react";
 import Layout from "@/components/Layout";
@@ -70,7 +69,7 @@ const Index = () => {
       </section>
 
       {/* Services Preview Section */}
-      <section className="py-16 bg-muted/30">
+      <section id="our-services" className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Key Services</h2>
@@ -91,7 +90,7 @@ const Index = () => {
       </section>
 
       {/* About Preview Section */}
-      <section className="py-16 bg-white">
+      <section id="who-we-are" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
@@ -135,7 +134,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-muted/30">
+      <section id="testimonials" className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">What Our Clients Say</h2>
