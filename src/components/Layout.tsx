@@ -108,9 +108,10 @@ const Layout = ({ children }: LayoutProps) => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
               <address className="not-italic">
-                <p className="text-sm opacity-90 mb-1">Singapore</p>
-                <p className="text-sm opacity-90 mb-1">Phone: +65 XXXX XXXX</p>
-                <p className="text-sm opacity-90">Email: info@retrospace.com</p>
+                <p className="text-sm opacity-90 mb-1">Al Diyar Building, Sheikh Zayed Road</p>
+                <p className="text-sm opacity-90 mb-1">Al Wasl, Dubai - UAE</p>
+                <p className="text-sm opacity-90 mb-1">Mobile: +971 56 629 7487</p>
+                <p className="text-sm opacity-90 mb-1">Singapore Representative</p>
                 <p className="mt-2 text-sm font-semibold">Emergency: +65 XXXX XXXX</p>
               </address>
             </div>
