@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
@@ -111,8 +110,7 @@ const Layout = ({ children }: LayoutProps) => {
                 <p className="text-sm opacity-90 mb-1">Al Diyar Building, Sheikh Zayed Road</p>
                 <p className="text-sm opacity-90 mb-1">Al Wasl, Dubai - UAE</p>
                 <p className="text-sm opacity-90 mb-1">Mobile: +971 56 629 7487</p>
-                <p className="text-sm opacity-90 mb-1">Singapore Representative</p>
-                <p className="mt-2 text-sm font-semibold">Emergency: +65 XXXX XXXX</p>
+                <p className="mt-2 text-sm font-semibold">Emergency: +971 56 629 7487</p>
               </address>
             </div>
           </div>
