@@ -15,7 +15,6 @@ const Layout = ({ children }: LayoutProps) => {
           <div className="flex items-center mb-4 md:mb-0">
             <Link to="/" className="flex items-center">
               <span className="text-2xl font-bold text-primary">Retro Space</span>
-              <span className="text-sm ml-2 text-muted-foreground">Technical Services Co. L.L.C</span>
             </Link>
           </div>
           <p className="text-sm text-muted-foreground mb-4 md:mb-0 md:hidden">Precision Engineering for Modern Spaces</p>
@@ -72,11 +71,6 @@ const Layout = ({ children }: LayoutProps) => {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link to="/projects" className={cn(navigationMenuTriggerStyle())}>
-                    Projects
-                  </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
                   <Link to="/testimonials" className={cn(navigationMenuTriggerStyle())}>
                     Testimonials
                   </Link>
@@ -99,16 +93,15 @@ const Layout = ({ children }: LayoutProps) => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-lg font-semibold mb-4">Retro Space Technical Services</h3>
+              <h3 className="text-lg font-semibold mb-4">Retro Space</h3>
               <p className="text-sm opacity-90">Precision Engineering for Modern Spaces</p>
-              <p className="mt-4 text-sm opacity-80">© {new Date().getFullYear()} Retro Space Technical Services Co. L.L.C</p>
+              <p className="mt-4 text-sm opacity-80">© {new Date().getFullYear()} Retro Space</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li><Link to="/about" className="text-sm opacity-90 hover:opacity-100">About Us</Link></li>
                 <li><Link to="/services" className="text-sm opacity-90 hover:opacity-100">Our Services</Link></li>
-                <li><Link to="/projects" className="text-sm opacity-90 hover:opacity-100">Projects</Link></li>
                 <li><Link to="/contact" className="text-sm opacity-90 hover:opacity-100">Contact</Link></li>
               </ul>
             </div>
