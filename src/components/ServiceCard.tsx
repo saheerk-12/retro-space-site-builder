@@ -1,7 +1,5 @@
 
-import { Link } from "react-router-dom";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { LucideIcon } from "lucide-react";
 
 interface ServiceCardProps {
@@ -11,7 +9,7 @@ interface ServiceCardProps {
   link: string;
 }
 
-const ServiceCard = ({ title, description, icon: Icon, link }: ServiceCardProps) => {
+const ServiceCard = ({ title, description, icon: Icon }: ServiceCardProps) => {
   return (
     <Card className="h-full flex flex-col transition-all hover:shadow-md">
       <CardHeader>
@@ -22,13 +20,7 @@ const ServiceCard = ({ title, description, icon: Icon, link }: ServiceCardProps)
         <CardDescription className="text-muted-foreground mt-2">{description}</CardDescription>
       </CardHeader>
       <CardContent className="flex-grow">
-        
       </CardContent>
-      <CardFooter>
-        <Button variant="outline" asChild className="w-full">
-          <Link to={link}>Learn More</Link>
-        </Button>
-      </CardFooter>
     </Card>
   );
 };

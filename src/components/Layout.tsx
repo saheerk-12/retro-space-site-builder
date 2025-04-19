@@ -1,12 +1,17 @@
+
 import { Link } from "react-router-dom";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
+import EmailPopup from "./EmailPopup";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 const Layout = ({ children }: LayoutProps) => {
+  const [emailPopupOpen, setEmailPopupOpen] = useState(false);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -52,9 +57,9 @@ const Layout = ({ children }: LayoutProps) => {
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link to="/contact" className={cn(navigationMenuTriggerStyle())}>
+                  <button onClick={() => setEmailPopupOpen(true)} className={cn(navigationMenuTriggerStyle())}>
                     Contact Us
-                  </Link>
+                  </button>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
@@ -76,9 +81,38 @@ const Layout = ({ children }: LayoutProps) => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
-                <li><Link to="/about" className="text-sm opacity-90 hover:opacity-100">About Us</Link></li>
-                <li><Link to="/services" className="text-sm opacity-90 hover:opacity-100">Our Services</Link></li>
-                <li><Link to="/contact" className="text-sm opacity-90 hover:opacity-100">Contact</Link></li>
+                <li>
+                  <Link
+                    to="/#who-we-are"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection('who-we-are');
+                    }}
+                    className="text-sm opacity-90 hover:opacity-100"
+                  >
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/#our-services"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection('our-services');
+                    }}
+                    className="text-sm opacity-90 hover:opacity-100"
+                  >
+                    Our Services
+                  </Link>
+                </li>
+                <li>
+                  <button
+                    onClick={() => setEmailPopupOpen(true)}
+                    className="text-sm opacity-90 hover:opacity-100"
+                  >
+                    Contact
+                  </button>
+                </li>
               </ul>
             </div>
             <div>
@@ -93,6 +127,7 @@ const Layout = ({ children }: LayoutProps) => {
           </div>
         </div>
       </footer>
+      <EmailPopup open={emailPopupOpen} onOpenChange={setEmailPopupOpen} />
     </div>
   );
 };

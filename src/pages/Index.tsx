@@ -3,9 +3,12 @@ import { AirVent, Fan, Building, Wrench } from "lucide-react";
 import Layout from "@/components/Layout";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
-import { Link } from "react-router-dom";
+import EmailPopup from "@/components/EmailPopup";
+import { useState } from "react";
 
 const Index = () => {
+  const [emailPopupOpen, setEmailPopupOpen] = useState(false);
+  
   const services = [
     {
       title: "HVAC Systems",
@@ -61,8 +64,8 @@ const Index = () => {
             <div className="mb-8">
               <p className="text-lg md:text-xl text-gray-300">Licensed | Reliable | Quality Workmanship</p>
             </div>
-            <Button size="lg" asChild className="text-lg px-8 py-6">
-              <Link to="/contact">Get a Free Quote Today</Link>
+            <Button size="lg" className="text-lg px-8 py-6" onClick={() => setEmailPopupOpen(true)}>
+              Get a Free Quote Today
             </Button>
           </div>
         </div>
@@ -95,7 +98,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold mb-6">Who We Are</h2>
-              <p className="text-muted-foreground mb-4">Retro Space Technical Services Co. L.L.C is a Singapore-based LLC specializing in integrated building solutions since 2010.</p>
+              <p className="text-muted-foreground mb-4">Retro Space Technical Services Co. L.L.C is a Dubai-based LLC specializing in integrated building solutions since 2010.</p>
               <h3 className="text-xl font-semibold mb-4">Our Mission</h3>
               <p className="text-muted-foreground mb-6">To deliver sustainable, high-quality technical services with a focus on innovation and client satisfaction.</p>
               <div className="space-y-3">
@@ -150,11 +153,6 @@ const Index = () => {
               />
             ))}
           </div>
-          <div className="text-center mt-12">
-            <Button variant="outline" asChild>
-              <Link to="/testimonials">View More Testimonials</Link>
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -163,11 +161,13 @@ const Index = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Start Your Project?</h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto text-primary-foreground/80">Contact us today for a consultation and free quote on your technical service needs.</p>
-          <Button size="lg" variant="secondary" asChild>
-            <Link to="/contact">Contact Us Now</Link>
+          <Button size="lg" variant="secondary" onClick={() => setEmailPopupOpen(true)}>
+            Contact Us Now
           </Button>
         </div>
       </section>
+
+      <EmailPopup open={emailPopupOpen} onOpenChange={setEmailPopupOpen} />
     </Layout>
   );
 };
