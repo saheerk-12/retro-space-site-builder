@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { AirVent, Fan, Building, Wrench } from "lucide-react";
 import Layout from "@/components/Layout";
@@ -55,8 +54,8 @@ const Index = () => {
     },
     {
       quote: "Their electromechanical team solved problems other contractors couldn't figure out.",
-      author: "Yahiya Ismail",
-      company: "Singapore Properties Ltd."
+      author: "David Wong",
+      company: "David Properties Ltd."
     }
   ];
 

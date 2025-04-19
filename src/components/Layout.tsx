@@ -119,8 +119,8 @@ const Layout = ({ children }: LayoutProps) => {
               <address className="not-italic">
                 <p className="text-sm opacity-90 mb-1">Al Diyar Building, Sheikh Zayed Road</p>
                 <p className="text-sm opacity-90 mb-1">Al Wasl, Dubai - UAE</p>
-                <p className="text-sm opacity-90 mb-1">Mobile: +971 56 629 7487</p>
-                <p className="mt-2 text-sm font-semibold">Emergency: +971 56 629 7487</p>
+                <p className="text-sm opacity-90 mb-1">Emergency: +971 56 629 7487</p>
+                <p className="text-sm opacity-90 mb-1">Email: saheerskt@gmail.com</p>
               </address>
             </div>
           </div>

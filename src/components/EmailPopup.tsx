@@ -21,7 +21,11 @@ interface EmailPopupProps {
 
 const EmailPopup = ({ open, onOpenChange }: EmailPopupProps) => {
   const { toast } = useToast();
-  const form = useForm<EmailFormData>();
+  const form = useForm<EmailFormData>({
+    defaultValues: {
+      email: "saheerskt@gmail.com"
+    }
+  });
 
   const onSubmit = (data: EmailFormData) => {
     toast({
@@ -94,3 +98,4 @@ const EmailPopup = ({ open, onOpenChange }: EmailPopupProps) => {
 };
 
 export default EmailPopup;
+
