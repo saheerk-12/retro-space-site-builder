@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
@@ -25,7 +24,7 @@ const Layout = ({ children }: LayoutProps) => {
         <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center mb-4 md:mb-0">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold text-primary">Retro Space</span>
+              <span className="text-4xl font-bold text-primary">Retro Space</span>
             </Link>
           </div>
           <p className="text-sm text-muted-foreground mb-4 md:mb-0 md:hidden">Precision Engineering for Modern Spaces</p>

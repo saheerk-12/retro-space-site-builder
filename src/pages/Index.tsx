@@ -23,7 +23,7 @@ const Index = () => {
       description: "Equipment installation, maintenance, and troubleshooting for all your technical needs.",
       icon: Fan,
       link: "/services/electromechanical",
-      image: "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=1000"
+      image: "https://images.unsplash.com/photo-1516737490857-848138daced4?q=80&w=1000"
     },
     {
       title: "Plumbing & Electrical",
