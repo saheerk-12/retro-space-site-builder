@@ -15,7 +15,15 @@ const ServiceCard = ({ title, description, icon: Icon, link, image }: ServiceCar
   return (
     <Card className="h-full flex flex-col transition-all hover:shadow-md">
       <div className="relative h-48 overflow-hidden rounded-t-lg">
-        <img src={image} alt={title} className="w-full h-full object-cover" />
+        <img 
+          src={image} 
+          alt={title} 
+          className="w-full h-full object-cover" 
+          onError={(e) => {
+            console.error(`Failed to load image: ${image}`);
+            e.currentTarget.src = "https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?q=80&w=800";
+          }}
+        />
       </div>
       <CardHeader>
         <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">

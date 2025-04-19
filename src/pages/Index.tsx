@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { AirVent, Fan, Building, Wrench } from "lucide-react";
 import Layout from "@/components/Layout";
@@ -23,7 +24,7 @@ const Index = () => {
       description: "Equipment installation, maintenance, and troubleshooting for all your technical needs.",
       icon: Fan,
       link: "/services/electromechanical",
-      image: "https://images.unsplash.com/photo-1516737490857-848138daced4?q=80&w=1000"
+      image: "https://images.unsplash.com/photo-1486718448742-163732cd1544?q=80&w=1000"
     },
     {
       title: "Plumbing & Electrical",
