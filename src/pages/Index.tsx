@@ -15,32 +15,36 @@ const Index = () => {
       title: "HVAC Systems",
       description: "Installation, maintenance, and repair of air-conditioning, ventilation, and air filtration systems.",
       icon: AirVent,
-      link: "/services/hvac"
+      link: "/services/hvac",
+      image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=1000"
     },
     {
       title: "Electromechanical Works",
       description: "Equipment installation, maintenance, and troubleshooting for all your technical needs.",
       icon: Fan,
-      link: "/services/electromechanical"
+      link: "/services/electromechanical",
+      image: "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=1000"
     },
     {
       title: "Plumbing & Electrical",
       description: "Sanitary works, pipefitting, electrical contracting and infrastructure services.",
       icon: Wrench,
-      link: "/services/plumbing"
+      link: "/services/plumbing",
+      image: "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?q=80&w=1000"
     },
     {
       title: "Building Finishing",
       description: "Tiling, carpentry, false ceilings, plastering, glass/aluminum works and more.",
       icon: Building,
-      link: "/services/building"
+      link: "/services/building",
+      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1000"
     }
   ];
 
   const testimonials = [
     {
       quote: "Retro Space transformed our office HVAC system efficiently!",
-      author: "John Smith",
+      author: "Hussain More",
       company: "ABC Corporation"
     },
     {
@@ -50,7 +54,7 @@ const Index = () => {
     },
     {
       quote: "Their electromechanical team solved problems other contractors couldn't figure out.",
-      author: "David Wong",
+      author: "Yahiya Ismail",
       company: "Singapore Properties Ltd."
     }
   ];
@@ -87,6 +91,7 @@ const Index = () => {
                 description={service.description}
                 icon={service.icon}
                 link={service.link}
+                image={service.image}
               />
             ))}
           </div>
@@ -122,9 +127,6 @@ const Index = () => {
                   <span>10+ Years of Experience</span>
                 </div>
               </div>
-              <Button className="mt-8" asChild>
-                <Link to="/about">Learn More About Us</Link>
-              </Button>
             </div>
             <div className="rounded-lg overflow-hidden shadow-lg">
               <img 
