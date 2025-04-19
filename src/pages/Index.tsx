@@ -5,6 +5,7 @@ import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import EmailPopup from "@/components/EmailPopup";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const [emailPopupOpen, setEmailPopupOpen] = useState(false);
