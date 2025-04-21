@@ -23,21 +23,21 @@ const Index = () => {
       description: "Equipment installation, maintenance, and troubleshooting for all your technical needs.",
       icon: Fan,
       link: "/services/electromechanical",
-      image: "https://images.unsplash.com/photo-1466442929976-97f336a657be"
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000"
     },
     {
       title: "Plumbing & Electrical",
       description: "Sanitary works, pipefitting, electrical contracting and infrastructure services.",
       icon: Wrench,
       link: "/services/plumbing",
-      image: "https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151"
+      image: "https://images.unsplash.com/photo-1544984243-ec57ea16fe25?q=80&w=1000"
     },
     {
       title: "Building Finishing",
       description: "Tiling, carpentry, false ceilings, plastering, glass/aluminum works and more.",
       icon: Building,
       link: "/services/building",
-      image: "https://images.unsplash.com/photo-1469041797191-50ace28483c3"
+      image: "https://images.unsplash.com/photo-1541972447412-e8c2d352b7d1?q=80&w=1000"
     }
   ];
 
@@ -130,7 +130,7 @@ const Index = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-lg">
               <img 
-                src="https://images.unsplash.com/photo-1487958449943-2429e8be8625" 
+                src="https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151" 
                 alt="Modern building" 
                 className="w-full h-auto object-cover"
               />

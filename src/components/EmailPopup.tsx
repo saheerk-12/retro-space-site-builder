@@ -53,7 +53,7 @@ const EmailPopup = ({ open, onOpenChange }: EmailPopupProps) => {
         <DialogHeader>
           <DialogTitle>Contact Us</DialogTitle>
           <DialogDescription>
-            Send us a message and we'll get back to you soon.
+            Send us a message at <strong>saheerskt@gmail.com</strong> and we'll get back to you soon.
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>

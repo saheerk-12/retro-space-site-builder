@@ -61,7 +61,6 @@ const Layout = ({ children }: LayoutProps) => {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            <div className="hidden md:block text-sm text-muted-foreground">Precision Engineering for Modern Spaces</div>
           </div>
         </div>
       </header>
@@ -74,7 +73,7 @@ const Layout = ({ children }: LayoutProps) => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Retro Space</h3>
               <p className="text-sm opacity-90">Precision Engineering for Modern Spaces</p>
-              <p className="mt-4 text-sm opacity-80">© {new Date().getFullYear()} Retro Space</p>
+              <p className="mt-4 text-sm opacity-80">�� {new Date().getFullYear()} Retro Space</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
