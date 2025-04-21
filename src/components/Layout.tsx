@@ -27,7 +27,6 @@ const Layout = ({ children }: LayoutProps) => {
               <span className="text-4xl font-bold text-primary">Retro Space</span>
             </Link>
           </div>
-          <p className="text-sm text-muted-foreground mb-4 md:mb-0 md:hidden">Precision Engineering for Modern Spaces</p>
           <div className="flex items-center justify-between w-full md:w-auto">
             <NavigationMenu className="hidden md:flex">
               <NavigationMenuList>

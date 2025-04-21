@@ -23,21 +23,21 @@ const Index = () => {
       description: "Equipment installation, maintenance, and troubleshooting for all your technical needs.",
       icon: Fan,
       link: "/services/electromechanical",
-      image: "https://images.unsplash.com/photo-1486718448742-163732cd1544?q=80&w=1000"
+      image: "https://images.unsplash.com/photo-1466442929976-97f336a657be"
     },
     {
       title: "Plumbing & Electrical",
       description: "Sanitary works, pipefitting, electrical contracting and infrastructure services.",
       icon: Wrench,
       link: "/services/plumbing",
-      image: "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?q=80&w=1000"
+      image: "https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151"
     },
     {
       title: "Building Finishing",
       description: "Tiling, carpentry, false ceilings, plastering, glass/aluminum works and more.",
       icon: Building,
       link: "/services/building",
-      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1000"
+      image: "https://images.unsplash.com/photo-1469041797191-50ace28483c3"
     }
   ];
 

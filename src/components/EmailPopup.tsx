@@ -7,12 +7,18 @@ import { Textarea } from "@/components/ui/textarea";
 import { useForm } from "react-hook-form";
 import { Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import * as z from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
-interface EmailFormData {
-  name: string;
-  email: string;
-  message: string;
-}
+const formSchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  email: z.string().min(1, "Email is required").email("Invalid email format"),
+  message: z.string()
+    .min(1, "Message is required")
+    .max(200, "Message must not exceed 200 characters")
+});
+
+type EmailFormData = z.infer<typeof formSchema>;
 
 interface EmailPopupProps {
   open: boolean;
@@ -22,12 +28,17 @@ interface EmailPopupProps {
 const EmailPopup = ({ open, onOpenChange }: EmailPopupProps) => {
   const { toast } = useToast();
   const form = useForm<EmailFormData>({
+    resolver: zodResolver(formSchema),
     defaultValues: {
-      email: "saheerskt@gmail.com"
+      email: "",
+      name: "",
+      message: ""
     }
   });
 
   const onSubmit = (data: EmailFormData) => {
+    // In a real application, this would send an email to saheerskt@gmail.com
+    console.log("Sending email to: saheerskt@gmail.com", data);
     toast({
       title: "Message Sent",
       description: "We'll get back to you as soon as possible.",
@@ -52,7 +63,7 @@ const EmailPopup = ({ open, onOpenChange }: EmailPopupProps) => {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>Name*</FormLabel>
                   <FormControl>
                     <Input placeholder="Your name" {...field} />
                   </FormControl>
@@ -65,7 +76,7 @@ const EmailPopup = ({ open, onOpenChange }: EmailPopupProps) => {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>Email*</FormLabel>
                   <FormControl>
                     <Input placeholder="your@email.com" type="email" {...field} />
                   </FormControl>
@@ -78,9 +89,13 @@ const EmailPopup = ({ open, onOpenChange }: EmailPopupProps) => {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Message</FormLabel>
+                  <FormLabel>Message* (max 200 characters)</FormLabel>
                   <FormControl>
-                    <Textarea placeholder="How can we help you?" {...field} />
+                    <Textarea 
+                      placeholder="How can we help you?" 
+                      {...field} 
+                      maxLength={200}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -98,4 +113,3 @@ const EmailPopup = ({ open, onOpenChange }: EmailPopupProps) => {
 };
 
 export default EmailPopup;
-
