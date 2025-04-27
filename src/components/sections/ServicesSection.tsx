@@ -35,11 +35,11 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="our-services" className="py-24 bg-zinc-50 dark:bg-black">
+    <section id="our-services" className="py-24 bg-gradient-to-br from-yellow-50/80 to-amber-100/80">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4">Our Services</h2>
-          <p className="text-muted-foreground">Comprehensive technical solutions for your space</p>
+          <h2 className="text-3xl font-bold mb-4 text-amber-800">Our Services</h2>
+          <p className="text-amber-700">Comprehensive technical solutions for your space</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (

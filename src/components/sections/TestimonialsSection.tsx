@@ -21,11 +21,11 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="py-24 bg-zinc-50 dark:bg-black">
+    <section id="testimonials" className="py-24 bg-gradient-to-br from-yellow-100 to-amber-50">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4">Client Testimonials</h2>
-          <p className="text-muted-foreground">What our clients say about us</p>
+          <h2 className="text-3xl font-bold mb-4 text-amber-800">Client Testimonials</h2>
+          <p className="text-amber-700">What our clients say about us</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
