@@ -65,7 +65,7 @@ const Index = () => {
       <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white">
         <div className="container mx-auto px-4 py-16 md:py-24">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Your trusted partner in building maintenance and home renovation</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Your trusted partner in building maintenance and home renovation</h1>
             <div className="mb-8">
               <p className="text-lg md:text-xl text-gray-100">Licensed | Reliable | Quality Workmanship</p>
             </div>
@@ -163,7 +163,7 @@ const Index = () => {
       <section className="py-12 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Start Your Project?</h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto text-primary-foreground">Contact us today for a consultation and free quote on your technical service needs.</p>
+          <p className="text-lg mb-8 max-w-2xl mx-auto">Contact us today for a consultation and free quote on your technical service needs.</p>
           <Button size="lg" variant="secondary" onClick={() => setEmailPopupOpen(true)}>
             Contact Us Now
           </Button>
