@@ -9,20 +9,19 @@ interface TestimonialCardProps {
 
 const TestimonialCard = ({ quote, author, company }: TestimonialCardProps) => {
   return (
-    <Card className="relative overflow-hidden bg-white dark:bg-zinc-900 transition-all duration-300 hover:shadow-xl">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
+    <Card className="h-full">
       <CardHeader>
-        <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
-          <svg className="h-5 w-5 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+        <div className="w-10 h-10 flex items-center justify-center">
+          <svg className="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M11.192 15.757c0-.88-.23-1.618-.69-2.217-.326-.412-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16-.95.1-1.96.41-3.016.341-1.167.809-2.15 1.404-2.95.554-.73 1.2-1.272 1.937-1.618.738-.344 1.409-.52 2.01-.52.478 0 .833.114 1.058.343.224.228.339.526.339.895 0 .342-.044.633-.128.875-.336 1.09-.962 2.103-1.877 3.05-.914.943-1.857 1.696-2.833 2.258h-.021c.574.21 1.025.56 1.357 1.075.332.514.495 1.066.495 1.664zm7.5 0c0-.88-.23-1.618-.69-2.217-.326-.412-.77-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16-.95.1-1.96.41-3.016.34-1.167.81-2.15 1.402-2.95.554-.73 1.2-1.272 1.937-1.618.737-.344 1.41-.52 2.01-.52.478 0 .833.114 1.058.343.224.228.34.526.34.895 0 .342-.045.633-.13.875-.336 1.09-.96 2.103-1.876 3.05-.914.943-1.858 1.696-2.833 2.258h-.021c.574.21 1.025.56 1.356 1.075.332.514.495 1.066.495 1.664z" />
           </svg>
         </div>
       </CardHeader>
-      <CardContent className="space-y-4">
-        <p className="text-lg font-medium">{quote}</p>
-        <CardDescription className="space-y-1">
-          <p className="font-semibold text-primary">{author}</p>
-          {company && <p className="text-muted-foreground text-sm">{company}</p>}
+      <CardContent>
+        <p className="text-base font-medium mb-4 italic">{quote}</p>
+        <CardDescription>
+          <p className="font-semibold">{author}</p>
+          {company && <p>{company}</p>}
         </CardDescription>
       </CardContent>
     </Card>

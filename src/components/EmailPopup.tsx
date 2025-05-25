@@ -1,4 +1,3 @@
-
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
@@ -37,11 +36,14 @@ const EmailPopup = ({ open, onOpenChange }: EmailPopupProps) => {
   });
 
   const onSubmit = (data: EmailFormData) => {
-    // In a real application, this would send an email to saheerskt@gmail.com
-    console.log("Sending email to: saheerskt@gmail.com", data);
+    const { name, email, message } = data;
+    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+    const mailtoLink = `mailto:info@retro-space.com?subject=Contact Form Submission from ${encodeURIComponent(name)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+
     toast({
       title: "Message Sent",
-      description: "We'll get back to you as soon as possible.",
+      description: "Your email client should now be open to send the message to info@retro-space.com.",
     });
     form.reset();
     onOpenChange(false);
@@ -53,7 +55,7 @@ const EmailPopup = ({ open, onOpenChange }: EmailPopupProps) => {
         <DialogHeader>
           <DialogTitle>Contact Us</DialogTitle>
           <DialogDescription>
-            Send us a message at <strong>saheerskt@gmail.com</strong> and we'll get back to you soon.
+            Send us a message at <strong>info@retro-space.com</strong> and we'll get back to you soon.
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>

@@ -24,6 +24,7 @@ const Layout = ({ children }: LayoutProps) => {
         <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center mb-4 md:mb-0">
             <Link to="/" className="flex items-center">
+              <img src="/images/logo.jpg" alt="Retro Space Logo" className="h-12 w-auto mr-3" />
               <span className="text-4xl font-bold text-primary">Retro Space</span>
             </Link>
           </div>
@@ -71,9 +72,9 @@ const Layout = ({ children }: LayoutProps) => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
+              <img src="/images/logo.jpg" alt="Retro Space Logo" className="h-20 w-auto mb-4" /> {/* Updated logo size */}
               <h3 className="text-lg font-semibold mb-4">Retro Space</h3>
-              <p className="text-sm opacity-90">Precision Engineering for Modern Spaces</p>
-              <p className="mt-4 text-sm opacity-80">�� {new Date().getFullYear()} Retro Space</p>
+              <p className="text-sm mb-1">Precision Engineering for Modern Spaces</p> {/* Removed opacity-90 */}
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
@@ -85,7 +86,7 @@ const Layout = ({ children }: LayoutProps) => {
                       e.preventDefault();
                       scrollToSection('who-we-are');
                     }}
-                    className="text-sm opacity-90 hover:opacity-100"
+                    className="text-sm hover:opacity-100" /* Removed opacity-90 */
                   >
                     About Us
                   </Link>
@@ -97,7 +98,7 @@ const Layout = ({ children }: LayoutProps) => {
                       e.preventDefault();
                       scrollToSection('our-services');
                     }}
-                    className="text-sm opacity-90 hover:opacity-100"
+                    className="text-sm hover:opacity-100" /* Removed opacity-90 */
                   >
                     Our Services
                   </Link>
@@ -105,7 +106,7 @@ const Layout = ({ children }: LayoutProps) => {
                 <li>
                   <button
                     onClick={() => setEmailPopupOpen(true)}
-                    className="text-sm opacity-90 hover:opacity-100"
+                    className="text-sm hover:opacity-100" /* Removed opacity-90 */
                   >
                     Contact
                   </button>
@@ -115,10 +116,10 @@ const Layout = ({ children }: LayoutProps) => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
               <address className="not-italic">
-                <p className="text-sm opacity-90 mb-1">Al Diyar Building, Sheikh Zayed Road</p>
-                <p className="text-sm opacity-90 mb-1">Al Wasl, Dubai - UAE</p>
-                <p className="text-sm opacity-90 mb-1">Emergency: +971 56 629 7487</p>
-                <p className="text-sm opacity-90 mb-1">Email: saheerskt@gmail.com</p>
+                <p className="text-sm mb-1">Al Diyar Building, Sheikh Zayed Road</p> {/* Removed opacity-90 */}
+                <p className="text-sm mb-1">Al Wasl, Dubai - UAE</p> {/* Removed opacity-90 */}
+                <p className="text-sm mb-1">Emergency: +971 56 629 7487</p> {/* Removed opacity-90 */}
+                <p className="text-sm mb-1">Email: info@retro-space.com</p> {/* Removed opacity-90 */}
               </address>
             </div>
           </div>
