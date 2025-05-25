@@ -65,7 +65,7 @@ const Index = () => {
       <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white">
         <div className="container mx-auto px-4 py-16 md:py-24">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Your Trusted Partner in HVAC & Building Solutions</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Your trusted partner in building maintenance and home renovation</h1>
             <div className="mb-8">
               <p className="text-lg md:text-xl text-gray-100">Licensed | Reliable | Quality Workmanship</p>
             </div>
