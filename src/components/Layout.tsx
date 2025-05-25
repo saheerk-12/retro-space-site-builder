@@ -3,6 +3,7 @@ import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMe
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import EmailPopup from "./EmailPopup";
+import logoSrc from '/images/logo.jpg'; // Import the logo
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -23,8 +24,9 @@ const Layout = ({ children }: LayoutProps) => {
       <header className="border-b bg-white">
         <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center mb-4 md:mb-0">
+            {/* Logo and Company Name */}
             <Link to="/" className="flex items-center">
-              <img src="/images/logo.jpg" alt="Retro Space Logo" className="h-12 w-auto mr-3" />
+              <img src={logoSrc} alt="Retro Space Logo" className="h-12 w-auto mr-3" /> {/* Use imported logoSrc */}
               <span className="text-4xl font-bold text-primary">Retro Space</span>
             </Link>
           </div>
@@ -72,7 +74,8 @@ const Layout = ({ children }: LayoutProps) => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <img src="/images/logo.jpg" alt="Retro Space Logo" className="h-20 w-auto mb-4" /> {/* Updated logo size */}
+              {/* Logo */}
+              <img src={logoSrc} alt="Retro Space Logo" className="h-20 w-auto mb-4" /> {/* Use imported logoSrc */}
               <h3 className="text-lg font-semibold mb-4">Retro Space</h3>
               <p className="text-sm mb-1">Precision Engineering for Modern Spaces</p> {/* Removed opacity-90 */}
             </div>
