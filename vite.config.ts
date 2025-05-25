@@ -9,7 +9,7 @@ export default defineConfig(({ mode, command }) => ({
     host: "::",
     port: 8080,
   },
-  base: command === 'build' ? '/retro-space-site-builder/' : '/',
+  base: command === 'build' ? '/' : '/',
   plugins: [
     react(),
     mode === 'development' &&
